@@ -1,4 +1,4 @@
-import {Entity, model, property, belongsTo} from '@loopback/repository';
+import {belongsTo, Entity, model, property} from '@loopback/repository';
 import {Ruta} from './ruta.model';
 
 @model()
@@ -11,22 +11,22 @@ export class Vuelo extends Entity {
   id?: string;
 
   @property({
-    type: 'string',
+    type: 'date',
     required: true,
   })
-  fecha_inicio: string;
+  fecha_inicio: Date;
 
   @property({
     type: 'string',
     required: true,
   })
-  hora_inicio: string;
+  hora_inicio: String;
 
   @property({
-    type: 'string',
+    type: 'date',
     required: true,
   })
-  fecha_fin: string;
+  fecha_fin: Date;
 
   @property({
     type: 'string',
@@ -35,10 +35,10 @@ export class Vuelo extends Entity {
   hora_fin: string;
 
   @property({
-    type: 'string',
+    type: 'number',
     required: true,
   })
-  asientos_vendidos: string;
+  asientos_vendidos: number;
 
   @property({
     type: 'string',
